@@ -1,5 +1,7 @@
-const header = () =>
-    (
+import "./header.css";
+
+const HeaderNav = () =>{
+    return(
         <header>
             <nav>
                 <ul>
@@ -11,3 +13,6 @@ const header = () =>
             </nav>
         </header>
     );
+}
+
+export default HeaderNav;
