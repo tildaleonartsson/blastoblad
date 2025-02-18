@@ -16,10 +16,6 @@ function App() {
     <>
       <HeaderNav />
       <div className="app-container">
-        <header>
-          <h1>Blast & Blad</h1>
-          <p>test text</p>
-        </header>
 
         <main>
           <h2>Användare</h2>
