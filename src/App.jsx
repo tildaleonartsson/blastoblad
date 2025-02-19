@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import './App.css';
-import HeaderNav from './components/header.jsx';
+import HeaderNav from './components/header/header.jsx';
+import Hero from "./components/hero/hero.jsx";
 
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
   return (
     <>
       <HeaderNav />
+      <Hero />
       <div className="app-container">
 
         <main>
