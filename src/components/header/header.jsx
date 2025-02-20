@@ -45,22 +45,22 @@ const HeaderNav = () => {
         </button>
         <nav>
           <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/contact">Contact</a></li>
+            <li><a href="/">Hem</a></li>
+            <li><a href="/boden">Boden</a></li>
+            <li><a href="/självplock">Självplock</a></li>
+            <li><a href="/omoss">Om oss</a></li>
           </ul>
         </nav>
       </div>
 
       {/* Desktop navigation */}
       <div className="desktop-menu">
-        <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+      <ul>
+            <li><a href="/">Hem</a></li>
+            <li><a href="/boden">Boden</a></li>
+            <li><a href="/självplock">Självplock</a></li>
+            <li><a href="/omoss">Om oss</a></li>
+          </ul>
       </div>
     </header>
   );
