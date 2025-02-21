@@ -1,40 +1,62 @@
-.spots-container {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    padding: 20px;
-    justify-items: center;
+/* Förhindrar att layouten överskrider skärmen */
+* {
+  max-width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.spots-grid {
+  display: grid;
+  gap: 5px;
+  max-width: 100%; /* Säkerställer att den aldrig blir bredare än skärmen */
+  height: auto;
+  margin-top: 5px;
+
+  /* Mobil: 2x2 layout */
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.spot-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1/1; /* Håller kvadratiskt format */
+  overflow: hidden;
+}
+
+/* Bildstil + Inzoomningseffekt */
+.spot-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease-in-out;
+  display: block;
+}
+
+.spot-container:hover .spot-image {
+  transform: scale(1.05);
+}
+
+/* Ribbon */
+.ribbon {
+  position: absolute;
+  top: 30px;
+  left: 0px;
+  font-size: 1.2rem;
+  color: rgba(240, 240, 215, 1);
+  padding: 10px 30px 10px 10px;
+  background: rgba(71, 102, 59, 0.8);
+  clip-path: polygon(100% 0,0 0,0 100%,100% 100%,100% calc(100% - .25em),calc(100% - 0.8em) 50%,100% .25em);
+  z-index: 2;
+}
+
+/* Desktop: 1x4 layout */
+@media (min-width: 768px) {
+  .spots-grid {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 1fr;
   }
-  
-  .spot {
-    background: white;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
-    padding: 16px;
-    max-width: 500px;
-    text-align: center;
-  }
-  
-  .spot-image {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-  }
-  
-  .spot-title {
-    font-size: 1.2rem;
-    margin: 12px 0 8px;
-  }
-  
-  .spot-text {
-    font-size: 1rem;
-    color: #555;
-  }
-  
-  @media (min-width: 768px) {
-    .spots-container {
-      grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-    }
-  }
-  
+}

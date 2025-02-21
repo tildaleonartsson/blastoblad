@@ -1,14 +1,20 @@
 import React from "react";
-import "./Spots.css";
+import "./spots.css";
 
-const Spots = ({ spots }) => {
+const spotsData = [
+  { src: "/images/skylt/skyltenväg.jpg", text: "Hitta Till Oss" },
+  { src: "/images/boden/bodenpappajason.jpg", text: "Grönsaksboden" },
+  { src: "/images/blommor/bukettsolrosgräs.jpg", text: "Självplock Blommor" },
+  { src: "/images/familjen/fikaskåpbilen.jpg", text: "Om Oss" },
+];
+
+const Spots = () => {
   return (
-    <div className="spots-container">
-      {spots.map((spot, index) => (
-        <div key={index} className="spot">
-          <img src={spot.image} alt={spot.title} className="spot-image" />
-          <h3 className="spot-title">{spot.title}</h3>
-          <p className="spot-text">{spot.text}</p>
+    <div className="spots-grid">
+      {spotsData.map((spot, index) => (
+        <div key={index} className="spot-container">
+          <div className="ribbon">{spot.text}</div>
+          <img src={spot.src} alt={spot.text} className="spot-image" />
         </div>
       ))}
     </div>

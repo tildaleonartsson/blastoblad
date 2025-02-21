@@ -1,0 +1,41 @@
+.footer {
+    padding: 20px;
+  }
+  
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: 50px auto;
+  }
+  
+  .footer-left p,
+  .footer-center p,
+  .footer-right p {
+    margin: 5px 0;
+    font-size: 1.1rem;
+  }
+
+  .footer-right {
+    max-width: 40%;
+  }
+
+  .footer-center {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .social-icons-footer {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+    justify-content: end;
+  }
+  
+  .icon {
+    font-size: 24px;
+    cursor: pointer;
+  }
+  

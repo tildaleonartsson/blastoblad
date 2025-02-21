@@ -1,12 +1,12 @@
-import React from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
-import './hero.css';
+import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import "./hero.css";
 
-const Hero = () => {
+const Hero = ({ image, title, subtitle, linkText, linkUrl }) => {
   return (
     <div className="hero-container">
-      {/* Social media icons positioned top-left on desktop */}
+      {/* Sociala medier-ikoner */}
       <div className="social-icons-hero">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="lg" />
@@ -16,11 +16,12 @@ const Hero = () => {
         </a>
       </div>
 
-      {/* Hero image and text */}
+      {/* Dynamiskt innehåll */}
       <div className="hero-content">
-        <img src="/images/blommor/dahliarosa.jpg" alt="Hero" className="hero-image" />
-        <h2>"Från vår trädgård, till ert hem"</h2>
-        <p>Hitta till oss</p>
+        <img src={image} alt="Hero" className="hero-image" />
+        <h2>{title}</h2>
+        <p>{subtitle}</p>
+        {linkUrl && <a href={linkUrl} className="hero-link">{linkText}</a>}
       </div>
     </div>
   );
