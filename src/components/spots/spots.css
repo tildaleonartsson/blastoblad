@@ -25,6 +25,7 @@ body {
   width: 100%;
   aspect-ratio: 1/1; /* Håller kvadratiskt format */
   overflow: hidden;
+  margin-bottom: 5px;
 }
 
 /* Bildstil + Inzoomningseffekt */

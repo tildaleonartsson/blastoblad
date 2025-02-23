@@ -23,8 +23,8 @@ const HeaderNav = () => {
         </div>
 
         {/* Logo with image */}
-        <div className="logo">
-          <img src="/images/logotyp/LoggaNoBackground.png" alt="Logo" className="logo-img" />
+        <div className="logo"><a href="/"><img src="/images/logotyp/LoggaNoBackground.png" alt="Logo" className="logo-img" /></a>
+          
         </div>
 
         {/* Social media icons */}

@@ -19,8 +19,8 @@ const Hero = ({ image, title, subtitle, linkText, linkUrl }) => {
       {/* Dynamiskt innehåll */}
       <div className="hero-content">
         <img src={image} alt="Hero" className="hero-image" />
-        <h2>{title}</h2>
-        <p>{subtitle}</p>
+        <h2 className="h2hero">{title}</h2>
+        <p className="phero">{subtitle}</p>
         {linkUrl && <a href={linkUrl} className="hero-link">{linkText}</a>}
       </div>
     </div>

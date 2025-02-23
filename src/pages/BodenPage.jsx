@@ -1,6 +1,7 @@
 import React from "react";
 import HeaderNav from "../components/header/header";
 import Hero from "../components/hero/hero";
+import Footer from "../components/footer/footer";
 import ContentGallery from "../components/contentgallery/contentgallery";
 
 const BodenPage = () => {
@@ -31,10 +32,7 @@ const BodenPage = () => {
         overlayText={overlayText} 
         galleryImages={galleryImages} 
       />
-      <div>
-        <h1>Grönsaksboden</h1>
-        <p>Här kan du köpa färska och närodlade grönsaker varje dag!</p>
-      </div>
+      <Footer />
     </>
   );
 };
