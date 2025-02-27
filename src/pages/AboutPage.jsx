@@ -1,11 +1,13 @@
 import React from "react";
+import HeaderNav from "../components/header/header";
+import Footer from "../components/footer/footer";
 
 const AboutPage = () => {
   return (
-    <div>
-      <h1>Om oss</h1>
-      <p>Vi är en mysig gårdsbutik som erbjuder grönsaker, självplock och mycket mer.</p>
-    </div>
+    <>
+    <HeaderNav />
+    <Footer />
+    </>
   );
 };
 

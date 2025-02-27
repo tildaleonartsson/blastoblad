@@ -23,7 +23,7 @@ const BodenPage = () => {
       <Hero
         image="/images/grönsaker/potatisplantor.jpg"
         title="Härodlat och Närodlat"
-        subtitle="Läckerheter från Bjärehalvön"
+        subtitle="I boden varierar sortimentet dagligen. Alltid med läckerheter från Bjärehalvön"
         linkText="Se sortiment"
         linkUrl="/boden"
       />
