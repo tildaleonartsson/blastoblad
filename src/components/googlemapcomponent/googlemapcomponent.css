@@ -1,0 +1,53 @@
+.info-window img {width: 150px; height: 100px; object-fit: cover;}
+.info-window {width: auto;}
+
+/* Grundlayout */
+.map-container {
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+  }
+  
+  /* Karta */
+  .map-box {
+    width: 100%;
+  }
+  
+  /* Adressruta */
+  .address-box {
+    align-items: center;
+    padding: 15px;
+    color: rgb(255, 255, 225);
+    background-color: rgba(71, 102, 59, 0.8);
+  }
+
+  .address-icon {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  
+  /* Ikon */
+  .icon {
+    font-size: 24px;
+    margin-right: 10px;
+  }
+  
+  /* Desktop layout */
+  @media (min-width: 768px) {
+    .map-container {
+      flex-direction: row; /* Kartan och adressrutan sida vid sida */
+      height: 400px;
+    }
+  
+    .map-box {
+      width: 60%;
+    }
+  
+    .address-box {
+      width: 40%;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  
