@@ -10,4 +10,13 @@ db.exec(`
   )
 `);
 
+db.exec(`
+  CREATE TABLE IF NOT EXISTS spots (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    src TEXT NOT NULL,
+    text TEXT NOT NULL,
+    link TEXT NOT NULL
+  )
+`);
+
 module.exports = db;
