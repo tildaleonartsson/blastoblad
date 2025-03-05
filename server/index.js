@@ -78,5 +78,42 @@ app.post("/logout", (req, res) => {
   res.clearCookie("token").json({ message: "Utloggad" });
 });
 
+// 🟢 GET - Hämta data från varje tabell
+app.get("/spots", (req, res) => {
+  const data = db.prepare("SELECT * FROM spots").all();
+  res.json(data);
+});
+
+app.get("/hero", (req, res) => {
+  const data = db.prepare("SELECT * FROM hero").all();
+  res.json(data);
+});
+
+// 🟡 PUT - Uppdatera en rad i varje tabell
+app.put("/spots/:id", (req, res) => {
+  const { id } = req.params;
+  const { src, text, link } = req.body;
+
+  db.prepare("UPDATE spots SET src = ?, text = ?, link = ? WHERE id = ?").run(
+    src,
+    text,
+    link,
+    id
+  );
+
+  res.json({ message: "Spots uppdaterad!" });
+});
+
+app.put("/hero/:id", (req, res) => {
+  const { id } = req.params;
+  const { image, title, subtitle, linkText, linkUrl } = req.body;
+
+  db.prepare(
+    "UPDATE hero SET image = ?, title = ?, subtitle = ?, linkText = ?, linkUrl = ? WHERE id = ?"
+  ).run(image, title, subtitle, linkText, linkUrl, id);
+
+  res.json({ message: "Hero uppdaterad!" });
+});
+
 // 🖥️ **Starta servern**
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));

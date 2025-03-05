@@ -1,12 +1,22 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import "./hero.css";
 
-const Hero = ({ image, title, subtitle, linkText, linkUrl }) => {
+const Hero = () => {
+  const [heroData, setHeroData] = useState(null);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/hero")
+      .then((res) => res.json())
+      .then((data) => setHeroData(data[0])) // Tar första raden från tabellen
+      .catch((err) => console.error("Fel vid hämtning av hero:", err));
+  }, []);
+
+  if (!heroData) return <p>Laddar...</p>;
+
   return (
     <div className="hero-container">
-      {/* Sociala medier-ikoner */}
       <div className="social-icons-hero">
         <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
           <FontAwesomeIcon icon={faFacebook} size="lg" />
@@ -16,12 +26,15 @@ const Hero = ({ image, title, subtitle, linkText, linkUrl }) => {
         </a>
       </div>
 
-      {/* Dynamiskt innehåll */}
       <div className="hero-content">
-        <img src={image} alt="Hero" className="hero-image" />
-        <h2 className="h2hero">{title}</h2>
-        <p className="phero">{subtitle}</p>
-        {linkUrl && <a href={linkUrl} className="hero-link">{linkText}</a>}
+        <img src={heroData.image} alt="Hero" className="hero-image" />
+        <h2 className="h2hero">{heroData.title}</h2>
+        <p className="phero">{heroData.subtitle}</p>
+        {heroData.linkUrl && (
+          <a href={heroData.linkUrl} className="hero-link">
+            {heroData.linkText}
+          </a>
+        )}
       </div>
     </div>
   );
