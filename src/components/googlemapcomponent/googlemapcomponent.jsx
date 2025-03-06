@@ -36,7 +36,6 @@ const GoogleMapComponent = () => {
                 </LoadScript>
             </div>
             <div className="address-box">
-                <h2>Information:</h2>
                 <h3>Öppettider</h3>
                  <p>Vardagar: 09:00 - 18:00</p>
                  <p>Helger: 10:00 - 16:00</p>

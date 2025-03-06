@@ -8,7 +8,6 @@
     align-items: center;     /* Centrerar innehållet horisontellt */
     padding: 10px 20px;
     position: relative;
-    background-color: rgba(224, 229, 220, 1);
   }
   
   /* Header content */
@@ -31,7 +30,7 @@
   }
 
   .hidden {
-    color: rgba(224, 229, 220, 1);
+    color: rgb(232, 240, 225);
     cursor: initial;
 }
   
