@@ -7,4 +7,11 @@ export default defineConfig({
   server: {
     port: 3000,
   },
+  css: {
+    preprocessorOptions: {
+      css: {
+        additionalData: `@import "~slick-carousel/slick/slick.css"; @import "~slick-carousel/slick/slick-theme.css";`,
+      },
+    },
+  },
 });

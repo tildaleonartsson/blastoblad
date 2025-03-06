@@ -115,5 +115,23 @@ app.put("/hero/:id", (req, res) => {
   res.json({ message: "Hero uppdaterad!" });
 });
 
+// 🟢 Hämta alla grönsaker
+app.get("/tomatoes", (req, res) => {
+  const data = db.prepare("SELECT * FROM tomatoes").all();
+  res.json(data);
+});
+
+// 🟡 Uppdatera en grönsak
+app.put("/tomatoes/:id", (req, res) => {
+  const { id } = req.params;
+  const { image, title, introduction, information } = req.body;
+
+  db.prepare(
+      "UPDATE tomatoes SET image = ?, title = ?, introduction = ?, information = ? WHERE id = ?"
+  ).run(image, title, introduction, information, id);
+
+  res.json({ message: "Grönsaksinformationen uppdaterad!" });
+});
+
 // 🖥️ **Starta servern**
 app.listen(5000, () => console.log("Server running on http://localhost:5000"));

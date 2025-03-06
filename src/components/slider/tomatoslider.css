@@ -1,0 +1,47 @@
+.slider-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.slick-slide {
+  padding: 10px;
+}
+
+.tomato-slide {
+  text-align: center;
+}
+
+.tomato-slide img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.tomato-slide h3 {
+  margin-top: 10px;
+  font-size: 1.2em;
+}
+
+.tomato-slide p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.slick-prev, .slick-next {
+  font-size: 24px;
+  color: #000;
+}
+
+.slick-prev {
+  left: -30px;
+}
+
+.slick-next {
+  right: -30px;
+}
+
+.slick-prev:hover, .slick-next:hover {
+  color: #ff6347;
+}
