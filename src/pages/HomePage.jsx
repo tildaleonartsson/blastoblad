@@ -25,7 +25,8 @@ const HomePage = () => {
         title="Tulpan säsong"
         description="Tulpansäsongen närmar sig. De har radan börjat titta upp över jorden i självplocket. Förhoppningen är att vi kommer kunna öppna vårt självplock tills Påsken, men den är sen i år och våra tulpaner har redan börjat titta upp. Hål utkik här och på sociala medier för uppdatering om när vi kommer att öppna vårt självplock för året."
         imageUrl="/images/blommor/tulpan2024.jpg"/>
-        <GoogleMapComponent />
+        <div id="map"><GoogleMapComponent /></div>
+        
         <Footer />
       </>
     );

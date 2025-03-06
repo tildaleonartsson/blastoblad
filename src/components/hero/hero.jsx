@@ -32,7 +32,7 @@ const Hero = () => {
         <p className="phero">{heroData.subtitle}</p>
         {heroData.linkUrl && (
           <a href={heroData.linkUrl} className="hero-link">
-            {heroData.linkText}
+            <p className="phero">{heroData.linkText}</p>
           </a>
         )}
       </div>

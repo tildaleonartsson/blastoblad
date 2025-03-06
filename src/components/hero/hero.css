@@ -49,10 +49,19 @@
   .phero {
     font-size: 1.5rem;
   }
+
+  .hero-link {
+    color: rgb(255, 255, 225);
+    text-decoration: none;
+  }
   
   @media (min-width: 769px) {
     .social-icons-hero {
       display: flex;
+    }
+
+    .hero-link :hover{
+      text-decoration: underline;
     }
   }
   

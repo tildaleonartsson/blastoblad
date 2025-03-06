@@ -18,15 +18,17 @@
   /* Adressruta */
   .address-box {
     align-items: center;
-    padding: 15px;
+    padding: 15px 40px;
     color: rgb(255, 255, 225);
     background-color: rgba(71, 102, 59, 0.8);
+    text-align: center;
   }
 
   .address-icon {
     display: flex;
     flex-direction: row;
     align-items: center;
+    justify-content: center;
   }
   
   /* Ikon */
