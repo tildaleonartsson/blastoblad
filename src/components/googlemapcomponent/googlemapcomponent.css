@@ -5,7 +5,9 @@
 .map-container {
     display: flex;
     flex-direction: column;
-    padding: 25px;
+    width: 100%;
+    margin-bottom: 30px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
   
   /* Karta */
@@ -38,6 +40,7 @@
     .map-container {
       flex-direction: row; /* Kartan och adressrutan sida vid sida */
       height: 400px;
+
     }
   
     .map-box {

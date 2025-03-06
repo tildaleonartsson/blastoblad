@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./spots.css";
 
-const spotsData = [
-  { src: "/images/skylt/skyltenväg.jpg", text: "Hitta Till Oss", link: "/hittahit" },
-  { src: "/images/boden/bodenpappajason.jpg", text: "Grönsaksboden", link: "/boden" },
-  { src: "/images/blommor/bukettsolrosgräs.jpg", text: "Självplock Blommor", link: "/självplock" },
-  { src: "/images/familjen/fikaskåpbilen.jpg", text: "Om Oss", link: "/omoss" },
-];
-
 const Spots = () => {
+  const [spotsData, setSpotsData] = useState([]);
+
+  useEffect(() => {
+    fetch("http://localhost:5000/spots")
+      .then((res) => res.json())
+      .then((data) => setSpotsData(data))
+      .catch((err) => console.error("Fel vid hämtning av spots:", err));
+  }, []);
+
   return (
     <div className="spots-grid">
-      {spotsData.map((spot, index) => (
-        <a key={index} href={spot.link} className="spot-container">
+      {spotsData.map((spot) => (
+        <a key={spot.id} href={spot.link} className="spot-container">
           <div className="ribbon">{spot.text}</div>
           <img src={spot.src} alt={spot.text} className="spot-image" />
         </a>
