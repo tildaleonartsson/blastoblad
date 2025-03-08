@@ -15,6 +15,8 @@ import Login from "./pages/Login.jsx";
 import Admin from "./pages/Admin.jsx";
 import PrivateRoute from "./routes/PrivateRoute";
 import { AuthProvider } from "./AuthContext.jsx";
+import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
+
 
 function App() {
   return (
