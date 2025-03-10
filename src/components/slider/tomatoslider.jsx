@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css"; // Import slick-carousel CSS
-import "slick-carousel/slick/slick-theme.css"; // Import slick-carousel theme CSS
 import "./tomatoslider.css"; // Import your own CSS for styling
+import { PrimeReactProvider } from "primereact/api";
+import { Carousel } from 'primereact/carousel';
+
+
 
 const TomatoSlider = () => {
   const [tomatoes, setTomatoes] = useState([]);
@@ -48,7 +49,7 @@ const TomatoSlider = () => {
   return (
     <div className="slider-container">
       <h2>Våra Tomater</h2>
-      <Slider {...settings}>
+      <Carousel {...settings}>
         {tomatoes.map((tomato) => (
           <div key={tomato.id} className="tomato-slide">
             <img src={tomato.image} alt={tomato.title} />
@@ -57,7 +58,7 @@ const TomatoSlider = () => {
             <p>{tomato.information}</p>
           </div>
         ))}
-      </Slider>
+      </Carousel>
     </div>
   );
 };

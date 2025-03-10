@@ -9,7 +9,7 @@ import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import BodenPage from "./pages/BodenPage.jsx";
 import SelfPickPage from "./pages/SelfPickPage.jsx";
-import FindUsPage from "./pages/FindUsPage.jsx";
+import OurFarm from "./pages/OurFarm.jsx";
 import NotFound from "./pages/NotFound.jsx";
 import Login from "./pages/Login.jsx";
 import Admin from "./pages/Admin.jsx";
@@ -28,7 +28,7 @@ function App() {
           <Route path="/omoss" element={<AboutPage />} />
           <Route path="/boden" element={<BodenPage />} />
           <Route path="/självplock" element={<SelfPickPage />} />
-          <Route path="/hittahit" element={<FindUsPage />} />
+          <Route path="/vårodling" element={<OurFarm />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
 

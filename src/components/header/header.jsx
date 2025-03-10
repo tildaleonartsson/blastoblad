@@ -49,7 +49,7 @@ const HeaderNav = () => {
             <li><a href="/boden">Boden</a></li>
             <li><a href="/självplock">Självplock</a></li>
             <li><a href="/omoss">Om oss</a></li>
-            <li><a href="/hittahit">Hitta hit</a></li>
+            <li><a href="/vårodling">Vår Odling</a></li>
           </ul>
         </nav>
       </div>
@@ -61,7 +61,7 @@ const HeaderNav = () => {
             <li><a href="/boden">Boden</a></li>
             <li><a href="/självplock">Självplock</a></li>
             <li><a href="/omoss">Om oss</a></li>
-            <li><a href="/hittahit">Hitta hit</a></li>
+            <li><a href="/vårodling">Vår Odling</a></li>
           </ul>
       </div>
     </header>
