@@ -1,7 +1,7 @@
 .parent {
   margin: 10px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: auto; /* Anpassar sig efter innehållet */
   grid-column-gap: 10px;
   grid-row-gap: 10px;
@@ -10,7 +10,6 @@
 
 .div1 { grid-area: 3 / 1 / 4 / 2; }
 .div2 { grid-area: 3 / 2 / 4 / 3; }
-.div3 { grid-area: 3 / 3 / 4 / 4; }
 .div4 { grid-area: 1 / 1 / 3 / 4; }
 
 .div1 img,
@@ -39,12 +38,12 @@
 /* För desktop */
 @media (min-width: 768px) {
   .parent {
-    grid-template-rows: repeat(3, 1fr); /* Säkerställer lika höjd per rad */
+    grid-template-rows: repeat(2, 1fr); /* Säkerställer lika höjd per rad */
+    grid-template-columns: 35% 67%;
   }
 
   .div1 { grid-area: 1 / 1 / 2 / 2; }
   .div2 { grid-area: 2 / 1 / 3 / 2; }
-  .div3 { grid-area: 3 / 1 / 4 / 2; }
   .div4 { grid-area: 1 / 2 / 4 / 4; } /* Tar upp tre rader */
 
   .div4 img {

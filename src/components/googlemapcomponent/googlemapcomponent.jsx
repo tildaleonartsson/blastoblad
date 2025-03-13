@@ -1,7 +1,7 @@
 import { GoogleMap, LoadScript, Marker, InfoWindow } from "@react-google-maps/api";
 import { useState } from "react";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; // Importera FontAwesomeIcon här
-import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"; // Importera den ikon du vill använda
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"; 
+import { faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons"; 
 import "./googlemapcomponent.css";
 
 const containerStyle = {
@@ -9,7 +9,7 @@ const containerStyle = {
   height: "400px",
 };
 
-const position = {lat: 56.41791929362326, lng: 12.815500382050317 }; // Exempel: Stockholm
+const position = {lat: 56.41791929362326, lng: 12.815500382050317 };
 
 const GoogleMapComponent = () => {
     const [showInfo, setShowInfo] = useState(false);
@@ -25,11 +25,11 @@ const GoogleMapComponent = () => {
                     {/* InfoWindow (visas när man klickar på markören) */}
                     {showInfo && (
                         <InfoWindow position={position} onCloseClick={() => setShowInfo(false)}>
-                        <div className="info-window">
-                            <img src="./images/boden/bodenpappajason.jpg" alt="" />
-                            <h3>Blast & Blad</h3>
-                            <p>Grönsaksbod och Blomstersälvplock</p>
-                        </div>
+                            <div className="info-window">
+                                <img src="./images/boden/bodenpappajason.jpg" alt="" />
+                                <h3>Blast & Blad</h3>
+                                <p>Grönsaksbod och Blomstersälvplock</p>
+                            </div>
                         </InfoWindow>
                     )}
                     </GoogleMap>
@@ -44,10 +44,6 @@ const GoogleMapComponent = () => {
                  <FontAwesomeIcon icon={faMapMarkerAlt} className="icon"/>
                  <p>Karstorpsvägen 256 <br />269 42 BÅSTAD</p></div>
                  <p>Vi finns uppe på Hallansåsen mellan Båstad och Torekov. Under säsong har boden och självplocket öppet alla dagar. Ta med familj och vänner för en trevlig stund på landet. </p>
-                
-            <div>
-          
-        </div>
             </div>
         </div>
     );
