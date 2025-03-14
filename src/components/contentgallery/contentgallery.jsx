@@ -4,10 +4,10 @@ import './ContentGallery.css';
 const ContentGallery = ({ mainImage, overlayText, galleryImages }) => {
   return (
     <>
-    <div class="parent">
-      <div class="div1"><img src="./images/boden/bodenpotatis.jpg" alt="" /> </div>
-      <div class="div2"><img src="/images/boden/bodensallad.jpg" alt="" /> </div>
-      <div class="div4"><img src={mainImage.src} alt={mainImage.alt} />
+    <div className="parent">
+      <div className="div1"><img src="./images/boden/bodenpotatis.jpg" alt="" /> </div>
+      <div className="div2"><img src="/images/boden/bodensallad.jpg" alt="" /> </div>
+      <div className="div4"><img src={mainImage.src} alt={mainImage.alt} />
         <div className="overlay">
           <h2>Grönsaksboden</h2>
             <p>I boden varierar sortimentet daligen efter åtkomst. Allt är antigen odlat här hos oss eller av andra lokala bönder på Bjäre. </p>

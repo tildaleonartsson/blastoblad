@@ -10,9 +10,18 @@ const Footer = () => {
       <div className="footer-container">
         {/* Vänster sektion */}
         <div className="footer-left">
-          <p>&nbsp;<FontAwesomeIcon icon={faMapMarkerAlt} className="icon"/> Karstorpsvägen 256<br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;269 42 BÅSTAD</p>
-          <p><FontAwesomeIcon icon={faEnvelope} className="icon"/> blastoblad@gmail.com</p>
-          <p><FontAwesomeIcon icon={faPhone} className="icon"/> 0703 18 28 42</p>
+          <div className="icon-text">
+          <FontAwesomeIcon icon={faMapMarkerAlt} className="icon-footer"/>
+          <p>Karstorpsvägen 256<br />269 42 BÅSTAD</p>
+          </div>
+          <div className="icon-text">
+          <FontAwesomeIcon icon={faEnvelope} className="icon-footer"/>
+          <p>blastoblad@gmail.com</p>
+          </div>
+          <div className="icon-text">
+          <FontAwesomeIcon icon={faPhone} className="icon-footer"/>
+          <p>0703 18 28 42</p>
+          </div>          
         </div>
 
         {/* Höger sektion */}
@@ -20,8 +29,8 @@ const Footer = () => {
           <p>Blast & Blad är ett familjeföretag där tre generationer arbetar tillsammans för att ge dig det bästa från vår odling. Med kärlek till jorden och hantverket följer vi vår filosofi: "Från vår trädgård, till ert hem." </p>
           <p>Följ oss på våra sociala medier.</p>
           <div className="social-icons-footer">
-            <FontAwesomeIcon icon={faFacebook} className="icon" />
-            <FontAwesomeIcon icon={faInstagram} className="icon" />
+            <FontAwesomeIcon icon={faFacebook} className="icon-footer" />
+            <FontAwesomeIcon icon={faInstagram} className="icon-footer" />
           </div>
         </div>
       </div>
