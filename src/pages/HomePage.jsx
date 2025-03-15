@@ -10,13 +10,7 @@ const HomePage = () => {
     return (
       <>
         <HeaderNav />
-        <Hero
-        image="/images/blommor/solrosor.jpg"
-        title="Från vår trädgård, till ert hem"
-        subtitle="Hitta till oss"
-        linkText="Läs mer"
-        linkUrl="/hittahit"
-        />
+        <Hero heroId={1} />
         <div style={{ width: "100vw", height: "auto" }}>
           <Spots />
         </div>

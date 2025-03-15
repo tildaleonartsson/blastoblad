@@ -1,17 +1,21 @@
 import React, { useEffect, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { useParams } from "react-router-dom";
 import "./hero.css";
 
-const Hero = () => {
+const Hero = ({ heroId }) => {
+  const { id: paramId } = useParams();
+  const finalId = heroId || paramId; // Använd prop om den finns, annars URL-parametern
+
   const [heroData, setHeroData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:5000/hero")
+    fetch(`http://localhost:5000/hero/${finalId}`)
       .then((res) => res.json())
-      .then((data) => setHeroData(data[0])) // Tar första raden från tabellen
+      .then((data) => setHeroData(data))
       .catch((err) => console.error("Fel vid hämtning av hero:", err));
-  }, []);
+  }, [finalId]);
 
   if (!heroData) return <p>Laddar...</p>;
 

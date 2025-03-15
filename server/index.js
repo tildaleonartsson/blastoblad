@@ -84,9 +84,18 @@ app.get("/spots", (req, res) => {
   res.json(data);
 });
 
-app.get("/hero", (req, res) => {
-  const data = db.prepare("SELECT * FROM hero").all();
-  res.json(data);
+app.get("/hero/:id", (req, res) => {
+  const { id } = req.params;
+  console.log(`Fetching hero with id: ${id}`); // Loggar ID:t
+
+  const hero = db.prepare("SELECT * FROM hero WHERE id = ?").get(id);
+  console.log("Hero found:", hero); // Loggar resultatet
+
+  if (!hero) {
+    return res.status(404).json({ message: "Hero not found" });
+  }
+
+  res.json(hero);
 });
 
 // 🟡 PUT - Uppdatera en rad i varje tabell
@@ -127,10 +136,15 @@ app.put("/tomatoes/:id", (req, res) => {
   const { image, title, introduction, information } = req.body;
 
   db.prepare(
-      "UPDATE tomatoes SET image = ?, title = ?, introduction = ?, information = ? WHERE id = ?"
+    "UPDATE tomatoes SET image = ?, title = ?, introduction = ?, information = ? WHERE id = ?"
   ).run(image, title, introduction, information, id);
 
   res.json({ message: "Grönsaksinformationen uppdaterad!" });
+});
+
+app.get("/chili", (req, res) => {
+  const data = db.prepare("SELECT * FROM chili").all();
+  res.json(data);
 });
 
 // 🖥️ **Starta servern**

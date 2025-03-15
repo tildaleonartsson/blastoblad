@@ -18,7 +18,24 @@
   
   .footer-right {
     margin-top: 50px;
-  } 
+  }
+
+  .footer-left {
+    margin-top: 30px;
+  }
+
+  .icon-text {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+  }
+  
+  .icon-footer {
+    width: 24px;
+    font-size: 24px;
+    margin-right: 10px;
+  }
+
   .social-icons-footer {
     display: flex;
     gap: 10px;
@@ -26,7 +43,7 @@
     justify-content: end;
   }
   
-  .icon {
+  .icon-footer {
     font-size: 24px;
     cursor: pointer;
     color: rgb(255, 255, 225);

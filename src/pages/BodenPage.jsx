@@ -20,12 +20,7 @@ const BodenPage = () => {
   return (
     <>
       <HeaderNav />
-      <Hero
-        image="/images/grönsaker/potatisplantor.jpg"
-        title="Härodlat och Närodlat"
-        subtitle="I boden varierar sortimentet dagligen. Alltid med läckerheter från Bjärehalvön"
-        linkText="Se sortiment"
-        linkUrl="/boden"
+      <Hero heroId={2}
       />
       <ContentGallery 
         mainImage={mainImage} 

@@ -1,10 +1,5 @@
-import { useState, useEffect } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import "./App.css";
-import HeaderNav from "./components/header/header.jsx";
-import Hero from "./components/hero/hero.jsx";
-import Spots from "./components/spots/spots.jsx";
-import Banner from "./components/banner/banner.jsx";
 import HomePage from "./pages/HomePage.jsx";
 import AboutPage from "./pages/AboutPage.jsx";
 import BodenPage from "./pages/BodenPage.jsx";
@@ -15,8 +10,7 @@ import Login from "./pages/Login.jsx";
 import Admin from "./pages/Admin.jsx";
 import PrivateRoute from "./routes/PrivateRoute";
 import { AuthProvider } from "./AuthContext.jsx";
-import { PrimeReactProvider, PrimeReactContext } from 'primereact/api';
-
+import Hero from "./components/hero/hero.jsx";
 
 function App() {
   return (
@@ -31,10 +25,11 @@ function App() {
           <Route path="/vårodling" element={<OurFarm />} />
           <Route path="/login" element={<Login />} />
           <Route path="*" element={<NotFound />} />
+          <Route path="/hero/:id" element={<Hero />} />
 
           {/* Skyddad admin-sida */}
           <Route element={<PrivateRoute />}>
-            <Route path="/admin" element={<Admin />} />
+          <Route path="/admin" element={<Admin />} />
           </Route>
         </Routes>
       </Router>
