@@ -1,0 +1,61 @@
+.img-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Två kolumner på mobil */
+    grid-template-rows: auto auto; /* Två rader */
+    gap: 10px;
+    width: 90%;
+    box-sizing: border-box;
+    justify-content: center;
+    margin: 25px auto;
+}
+
+.img-grid img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.img-grid-item-1{
+    grid-column: 1 / 3; /* Item 1 sträcker sig über båda kolumnerna */
+    grid-row: 1;
+}
+
+@media (min-width: 768px) {
+    .img-grid{
+        grid-template-columns: 1fr 1fr 1fr; /* Låt alla kolumner vara lika bredda */
+        gap: 25px;
+        width: 90%;
+        height: auto;
+        grid-template-areas: "a b c";
+
+    }
+    
+    .img-grid-item-1{
+        grid-area: a; /* Item 1 sträcker sig über de två första kolumnerna */
+        aspect-ratio: 1/1;
+    }
+
+    .img-grid-item-2{
+        grid-area: b; /* Item 2 på första kolumnen */
+        aspect-ratio: 1/1;
+    }
+
+    .img-grid-item-3{
+        grid-area: c; /* Item 3 på andra kolumnen */
+        aspect-ratio: 1/1;
+}
+}
+
+@media (min-width: 1024px) {
+    .img-grid{
+        grid-template-columns: 60% 40%; /* Återgå till din ursprungliga layout med två kolumner */
+        grid-template-rows: 400px 400px;
+        gap: 25px;
+        width: 70%;
+        grid-template-areas: "a b" "a c";
+
+    }
+    .img-grid-item-1, .img-grid-item-2, .img-grid-item-3{
+        aspect-ratio: auto;
+    }
+}

@@ -9,51 +9,9 @@ const ContentGallery = ({ mainImage, overlayText, galleryImages }) => {
       <div className="div2"><img src="/images/boden/bodensallad.jpg" alt="" /> </div>
       <div className="div4"><img src={mainImage.src} alt={mainImage.alt} />
         <div className="overlay">
-          <h2>Grönsaksboden</h2>
-            <p>I boden varierar sortimentet daligen efter åtkomst. Allt är antigen odlat här hos oss eller av andra lokala bönder på Bjäre. </p>
-            <h3>Närodlat</h3>
-            <ul>
-              <li>Potatis - Pether Jonzon i Vejbystrand</li>
-              <li>Sallad - Anders Jansson i Västra Ljungby</li>
-            </ul>
-            <h3>Härodlat</h3>
-            <ul>
-              <li>Lök</li>
-              <ul>
-                <li>Gullök</li>
-                <li>Rödlök</li>
-                <li>Vitlök</li>
-                <li>Shalottenlök</li>
-                <li>Salladslök</li>
-                <li>Purjolök</li>
-              </ul>
-              <li>Slanggurka</li>
-              <ul>
-                <li>Darwin</li>
-                <li>Garpo</li>
-              </ul>
-              <li>Stora Tomater</li>
-              
-              <li>Små Tomater</li>
-
-              <li>Chili</li>
-              <li>Morötter</li>
-              <li>Räddisor</li>
-              <li>Paprika</li>
-              <li>Färska kryddor</li>
-              <ul>
-                <li>Dill</li>
-                <li>Krondill</li>
-                <li>Persilja</li>
-                <li>Gräslök</li>
-                </ul>
-              <li>Bönor</li>
-              <ul>
-                <li>Vaxbönor</li>
-                <li>Brytbönor</li>
-              </ul>
-              <li>Rabarber</li>
-            </ul>
+          <p>Välkommen till vår lilla bod – fylld med färska råvaror och vackra blommor från Bjäre! Här hittar du noggrant utvalda grönsaker och blommor, odlade med omsorg hos oss eller hos andra lokala bönder.</p>
+          <p>Sortimentet varierar från dag till dag, men du kan nästan alltid hitta nyupptagen färskpotatis, solmogna tomater, krispig gurka, olika sorters sallad, morötter och bönor. Vi har även färska kryddor, rödlök, gul lök, schalottenlök, vitlök och purjolök – perfekta för att lyfta dina maträtter! När säsongen tillåter finns också solmogna jordgubbar, saftiga blåbär och syrlig rabarber.</p>
+          <p>Utanför boden finns vårt vackra blomster självplock. Men där inne finns det färdigbundna buktetter, ståtlig gladiolus och doftande luktärt.</p>
         </div>
     </div>
     </div>
